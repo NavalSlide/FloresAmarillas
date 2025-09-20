@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Un Detalle para Ti</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <div class="sky">
+        <!-- Stars will be generated here -->
+
+        <div class="grass"></div>
+
+        <div class="menu-container">
+            <h1>Flores para alguien especial 🌸</h1>
+            <p class="description">
+                Sé que esto no es lo que esperabas… Ojalá pudiera ir a tu casa con un ramo para verte sonreír, pero sé
+                que no sería bien recibido. Y el colegio tiene esa tonta regla de no dejar entrar flores 😔.<br><br>
+                Por eso, el lunes quiero regalarte algo hecho por mí, una manualidad pequeña pero llena de cariño, para
+                que sepas cuánto pienso en ti 💛.
+            </p>
+            <div class="options">
+                <a href="flores.html" class="menu-button">Ver flores virtuales 🌻</a>
+                <a href="manualidad.html" class="menu-button">Ver mi flor hecha a mano 🌼</a>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        window.onload = function () {
+            const numStars = 120;
+            const sky = document.body;
+            for (let i = 0; i < numStars; i++) {
+
+                const star = document.createElement('div');
+                // star.className = 'star'
+                star.style.left = Math.random() * window.innerWidth + 'px';
+                star.style.top = Math.random() * (window.innerHeight * 0.8) + 'px';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                sky.appendChild(star);
+            }
+        };
+    </script>
+</body>
+
+</html>
